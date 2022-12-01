@@ -1,4 +1,4 @@
-package uk.co.eandrews.day;
+package uk.co.eandrews.util;
 
 @FunctionalInterface
 public interface PuzzleSolution<T, R> {

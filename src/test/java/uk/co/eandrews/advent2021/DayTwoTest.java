@@ -1,17 +1,15 @@
-package uk.co.eandrews;
+package uk.co.eandrews.advent2021;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.day.day1.Day1;
-import uk.co.eandrews.day.day2.Command;
-import uk.co.eandrews.day.day2.CommandInputParser;
-import uk.co.eandrews.day.day2.Day2;
+
+import uk.co.eandrews.advent2021.day.day2.Command;
+import uk.co.eandrews.advent2021.day.day2.CommandInputParser;
+import uk.co.eandrews.advent2021.day.day2.Day2;
 import uk.co.eandrews.util.Vector2;
 import uk.co.eandrews.util.Vector3;
-import uk.co.eandrews.util.io.input.parser.InputParser;
 import uk.co.eandrews.util.io.input.resolver.InputResolver;
 
 import java.util.List;
-import java.util.stream.LongStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

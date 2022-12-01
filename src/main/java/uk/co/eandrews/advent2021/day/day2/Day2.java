@@ -1,20 +1,15 @@
-package uk.co.eandrews.day.day2;
+package uk.co.eandrews.advent2021.day.day2;
 
-import lombok.experimental.ExtensionMethod;
-import one.util.streamex.LongStreamEx;
 import one.util.streamex.StreamEx;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.day.Day;
-import uk.co.eandrews.day.PuzzleSolution;
-import uk.co.eandrews.util.LongStreamExUtil;
-import uk.co.eandrews.util.StreamExUtil;
+import uk.co.eandrews.advent2021.day.Day;
+import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.Vector2;
 import uk.co.eandrews.util.Vector3;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 @Component
