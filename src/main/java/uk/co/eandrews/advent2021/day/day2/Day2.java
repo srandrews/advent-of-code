@@ -2,7 +2,7 @@ package uk.co.eandrews.advent2021.day.day2;
 
 import one.util.streamex.StreamEx;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.advent2021.day.Day;
+import uk.co.eandrews.advent2021.day.Day2021;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.Vector2;
 import uk.co.eandrews.util.Vector3;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Component
-public class Day2 extends Day<Stream<Command>, Long> {
+public class Day2 extends Day2021<Stream<Command>, Long> {
 
     public Day2(final InputParser<Stream<Command>> inputParser) {
         super(2, inputParser);

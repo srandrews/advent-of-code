@@ -1,25 +1,19 @@
 package uk.co.eandrews;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import uk.co.eandrews.advent2021.day.Day;
-import uk.co.eandrews.util.io.input.resolver.InputResolver;
-
-import java.util.List;
+import uk.co.eandrews.util.Runner;
 
 @SpringBootApplication
 @Slf4j
+@RequiredArgsConstructor
 public class AdventOfCode implements ApplicationRunner {
-    private final InputResolver inputResolver;
-    private final List<Day<?, ?>> days;
 
-    public AdventOfCode(final InputResolver inputResolver, final List<Day<?, ?>> days) {
-        this.inputResolver = inputResolver;
-        this.days = days;
-    }
+    private final Runner runner;
 
     public static void main(final String[] args) {
         SpringApplication.run(AdventOfCode.class, args);
@@ -27,6 +21,6 @@ public class AdventOfCode implements ApplicationRunner {
 
     @Override
     public void run(final ApplicationArguments args) {
-        days.forEach(day -> log.info("Day {}: {}", day.getDay(), day.solve(inputResolver)));
+        runner.run();
     }
 }

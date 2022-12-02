@@ -1,24 +1,24 @@
-package uk.co.eandrews.advent2022;
+package uk.co.eandrews.advent2021.day;
 
-import java.util.Collection;
-import java.util.stream.IntStream;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Profile;
+import one.util.streamex.StreamEx;
+
 import org.springframework.util.StopWatch;
 
-import one.util.streamex.StreamEx;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 import uk.co.eandrews.util.io.input.resolver.InputResolver;
 
+import java.util.Collection;
+import java.util.stream.IntStream;
+
 @Slf4j
-@Profile("2022")
-public abstract class Day<T, V> {
+public abstract class Day2021<T, V> {
 
     private final int day;
     private final InputParser<T> inputParser;
 
-    protected Day(final int day, final InputParser<T> inputParser) {
+    protected Day2021(final int day, final InputParser<T> inputParser) {
         this.day = day;
         this.inputParser = inputParser;
     }

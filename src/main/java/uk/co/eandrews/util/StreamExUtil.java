@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @UtilityClass
 @ExtensionMethod({CollectionUtils.class})
@@ -38,7 +40,23 @@ public final class StreamExUtil {
         return stream.filter(element -> !predicate.test(element));
     }
 
-    public static <T> StreamEx<List<T>> ofSubLists(final StreamEx<T> source, final int length) {
-        return ofSubLists(source, length);
+    public static <T> StreamEx<List<T>> ofSubLists(final List<T> source, final int length) {
+        return StreamEx.ofSubLists(source, length);
     }
+
+    public static <T> StreamEx<List<T>> ofVariableSubLists(final List<T> source, final Predicate<T> delimiterMatch) {
+
+        int[] indexes =
+            IntStream.range(-1, source.size()+1)
+                .filter(i -> i==-1 || i==source.size() || delimiterMatch.test(source.get(i)))
+                .toArray();
+
+        List<List<T>> subSets =
+            IntStream.range(0, indexes.length-1)
+                .mapToObj(i -> source.subList(indexes[i]+1, indexes[i + 1]))
+                .collect(Collectors.toList());
+
+        return StreamEx.of(subSets);
+    }
+
 }

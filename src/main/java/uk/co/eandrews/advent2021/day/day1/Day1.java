@@ -4,7 +4,7 @@ import lombok.experimental.ExtensionMethod;
 import one.util.streamex.LongStreamEx;
 import one.util.streamex.StreamEx;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.advent2021.day.Day;
+import uk.co.eandrews.advent2021.day.Day2021;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.LongStreamExUtil;
 import uk.co.eandrews.util.StreamExUtil;
@@ -16,7 +16,7 @@ import java.util.stream.LongStream;
 
 @Component
 @ExtensionMethod({StreamEx.class, StreamExUtil.class, LongStreamEx.class, LongStreamExUtil.class})
-public class Day1 extends Day<LongStream, Long> {
+public class Day1 extends Day2021<LongStream, Long> {
 
     public Day1(final InputParser<LongStream> inputParser) {
         super(1, inputParser);

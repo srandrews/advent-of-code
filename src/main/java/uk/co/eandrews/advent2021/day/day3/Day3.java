@@ -3,7 +3,7 @@ package uk.co.eandrews.advent2021.day.day3;
 import one.util.streamex.IntStreamEx;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.advent2021.day.Day;
+import uk.co.eandrews.advent2021.day.Day2021;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Component
-public class Day3 extends Day<Stream<String>, Long> {
+public class Day3 extends Day2021<Stream<String>, Long> {
 
     public Day3(final InputParser<Stream<String>> inputParser) {
         super(3, inputParser);
