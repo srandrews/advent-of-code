@@ -29,6 +29,40 @@ public enum RockPaperScissors {
             .findFirst().orElseThrow();
     }
 
+    public static RockPaperScissors playerOutcomeValueOf(String opponentPlayed, String outcome) {
+        RockPaperScissors opponent = opponentValueOf(opponentPlayed);
+        return getGoBasedOnOutcome(opponent, Outcome.getOutcome(outcome));
+    }
+
+    private static RockPaperScissors getGoBasedOnOutcome(RockPaperScissors opponent, Outcome requiredOutcome) {
+        if (requiredOutcome == Outcome.DRAW) {
+            return opponent;
+        } else {
+            if (opponent == ROCK) {
+                if (requiredOutcome == Outcome.LOSE) {
+                    return SCISSORS;
+                } else {
+                    return PAPER;
+                }
+            } else if (opponent == SCISSORS) {
+                if (requiredOutcome == Outcome.LOSE) {
+                    return PAPER;
+                } else {
+                    return ROCK;
+                }
+            } else if (opponent == PAPER) {
+                if (requiredOutcome == Outcome.LOSE) {
+                    return ROCK;
+                } else {
+                    return SCISSORS;
+                }
+            }
+        }
+
+        throw new IllegalArgumentException();
+    }
+
+
     public Outcome getOutcome(RockPaperScissors played) {
         if (played == this) {
             return Outcome.DRAW;

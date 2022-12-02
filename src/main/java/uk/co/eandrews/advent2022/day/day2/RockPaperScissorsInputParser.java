@@ -14,6 +14,7 @@ public class RockPaperScissorsInputParser implements InputParser<Stream<RockPape
             return RockPaperScissorRound.builder()
                 .opponent(RockPaperScissors.opponentValueOf(round[0]))
                 .player(RockPaperScissors.playerValueOf(round[1]))
+                .outcome(RockPaperScissors.playerOutcomeValueOf(round[0], round[1]))
                 .build();
         });
     }

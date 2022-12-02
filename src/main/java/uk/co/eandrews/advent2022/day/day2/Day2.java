@@ -23,8 +23,8 @@ public class Day2 extends Day2022<Stream<RockPaperScissorRound>, Long> {
     @Override
     public Collection<PuzzleSolution<Stream<RockPaperScissorRound>, Long>> getSolutions() {
         return List.of(
-            partOneSolution()
-        //    partTwoSolution()
+            partOneSolution(),
+            partTwoSolution()
         );
     }
 
@@ -36,13 +36,11 @@ public class Day2 extends Day2022<Stream<RockPaperScissorRound>, Long> {
 
     }
 
-//
-//    public PuzzleSolution<Stream<String>, Long> partTwoSolution() {
-//        return input ->  getSummedStream(input)
-//            .sorted(Comparator.reverseOrder())
-//            .limit(3)
-//            .mapToLong(value -> value)
-//            .sum();
-//    }
+    public PuzzleSolution<Stream<RockPaperScissorRound>, Long> partTwoSolution() {
+        return input -> StreamEx.of(input)
+            .map(RockPaperScissorRound::getPlayerScoreOutcome)
+            .mapToLong(value -> value)
+            .sum();
+    }
 
 }

@@ -26,10 +26,10 @@ public class DayTwoTest {
         assertThat(day2.partOneSolution().solve(parser.parse(input.lines()))).isEqualTo(15);
     }
 
-//    @Test
-//    void partTwoSolution_should_return_45_000() {
-//        final Day2 day2 = new Day2(parser);
-//        assertThat(day2.partTwoSolution().solve(input.lines())).isEqualTo(45_000);
-//    }
+    @Test
+    void partTwoSolution_should_return_12() {
+        final Day2 day2 = new Day2(parser);
+        assertThat(day2.partTwoSolution().solve(parser.parse(input.lines()))).isEqualTo(12);
+    }
 
 }
