@@ -1,7 +1,7 @@
 package uk.co.eandrews.advent2021;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.advent2021.day.day3.Day3;
+import uk.co.eandrews.advent2021.day3.Day3;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 import uk.co.eandrews.util.io.input.resolver.InputResolver;
 

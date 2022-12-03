@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2021.day.day2;
+package uk.co.eandrews.advent2021.day2;
 
 import org.springframework.stereotype.Component;
 import uk.co.eandrews.util.io.input.parser.InputParser;

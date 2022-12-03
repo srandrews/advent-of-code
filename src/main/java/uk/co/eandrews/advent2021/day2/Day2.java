@@ -1,8 +1,8 @@
-package uk.co.eandrews.advent2021.day.day2;
+package uk.co.eandrews.advent2021.day2;
 
 import one.util.streamex.StreamEx;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.advent2021.day.Day2021;
+import uk.co.eandrews.advent2021.Day2021;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.Vector2;
 import uk.co.eandrews.util.Vector3;

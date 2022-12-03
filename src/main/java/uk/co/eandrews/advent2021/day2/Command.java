@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2021.day.day2;
+package uk.co.eandrews.advent2021.day2;
 
 import lombok.*;
 import uk.co.eandrews.util.Vector2;

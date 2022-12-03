@@ -2,9 +2,9 @@ package uk.co.eandrews.advent2021;
 
 import org.junit.jupiter.api.Test;
 
-import uk.co.eandrews.advent2021.day.day2.Command;
-import uk.co.eandrews.advent2021.day.day2.CommandInputParser;
-import uk.co.eandrews.advent2021.day.day2.Day2;
+import uk.co.eandrews.advent2021.day2.Command;
+import uk.co.eandrews.advent2021.day2.CommandInputParser;
+import uk.co.eandrews.advent2021.day2.Day2;
 import uk.co.eandrews.util.Vector2;
 import uk.co.eandrews.util.Vector3;
 import uk.co.eandrews.util.io.input.resolver.InputResolver;

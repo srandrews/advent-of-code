@@ -1,10 +1,10 @@
-package uk.co.eandrews.advent2021.day.day1;
+package uk.co.eandrews.advent2021.day1;
 
 import lombok.experimental.ExtensionMethod;
 import one.util.streamex.LongStreamEx;
 import one.util.streamex.StreamEx;
 import org.springframework.stereotype.Component;
-import uk.co.eandrews.advent2021.day.Day2021;
+import uk.co.eandrews.advent2021.Day2021;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.LongStreamExUtil;
 import uk.co.eandrews.util.StreamExUtil;

@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2021.day;
+package uk.co.eandrews.advent2021;
 
 import lombok.extern.slf4j.Slf4j;
 import one.util.streamex.StreamEx;
