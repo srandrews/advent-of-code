@@ -9,8 +9,11 @@ import uk.co.eandrews.util.StreamExUtil;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 @Component("Day3-2022")
@@ -41,7 +44,20 @@ public class Day3 extends Day2022<Stream<BackPack>, Long> {
     }
 
     public PuzzleSolution<Stream<BackPack>, Long> partTwoSolution() {
-        return input -> 0L;
+        return input -> input.toList().ofSubLists(3)
+            .map(backPacks -> backPacks.stream()
+                .findFirst()
+                .map(BackPack::getAllContents)
+                .map(HashSet::new)  // make a set out of it
+                .map(first -> backPacks.stream()
+                    .skip(1)    // don't need to process the first one
+                    .map(BackPack::getAllContents)
+                    .collect(() -> first, Set::retainAll, Set::retainAll)
+                ).orElse(new HashSet<>()))
+            .map(characterSet -> characterSet.stream()
+                .mapToLong(this::getCharacterValue))
+            .mapToLong(LongStream::sum)
+            .sum();
     }
 
     private int getCharacterValue(Character c) {
