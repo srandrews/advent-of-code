@@ -1,19 +1,16 @@
 package uk.co.eandrews.advent2022;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.advent2022.day.day2.Day2;
-import uk.co.eandrews.advent2022.day.day2.RockPaperScissorRound;
-import uk.co.eandrews.advent2022.day.day2.RockPaperScissorsInputParser;
-import uk.co.eandrews.advent2022.day.day3.BackPack;
-import uk.co.eandrews.advent2022.day.day3.BackPackInputParser;
-import uk.co.eandrews.advent2022.day.day3.Day3;
+import uk.co.eandrews.advent2022.day.day03.BackPack;
+import uk.co.eandrews.advent2022.day.day03.BackPackInputParser;
+import uk.co.eandrews.advent2022.day.day03.Day3;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DayThreeTest {
+public class Day03Test {
 
     String input = """
         vJrwpWtwJgWrhcsFMMfFFhFp

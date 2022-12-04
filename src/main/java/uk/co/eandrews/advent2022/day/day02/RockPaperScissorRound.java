@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2022.day.day2;
+package uk.co.eandrews.advent2022.day.day02;
 
 import lombok.Builder;
 import lombok.RequiredArgsConstructor;

@@ -1,16 +1,16 @@
 package uk.co.eandrews.advent2022;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.advent2022.day.day2.Day2;
-import uk.co.eandrews.advent2022.day.day2.RockPaperScissorRound;
-import uk.co.eandrews.advent2022.day.day2.RockPaperScissorsInputParser;
+import uk.co.eandrews.advent2022.day.day02.Day2;
+import uk.co.eandrews.advent2022.day.day02.RockPaperScissorRound;
+import uk.co.eandrews.advent2022.day.day02.RockPaperScissorsInputParser;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DayTwoTest {
+public class Day02Test {
 
     String input = """
         A Y

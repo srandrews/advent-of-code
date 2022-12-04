@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2022.day.day1;
+package uk.co.eandrews.advent2022.day.day01;
 
 import lombok.experimental.ExtensionMethod;
 import one.util.streamex.LongStreamEx;

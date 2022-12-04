@@ -1,14 +1,14 @@
 package uk.co.eandrews.advent2022;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.advent2022.day.day1.Day1;
+import uk.co.eandrews.advent2022.day.day01.Day1;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DayOneTest {
+public class Day01Test {
 
     String input = """
         1000
