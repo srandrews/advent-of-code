@@ -1,15 +1,10 @@
 package uk.co.eandrews.advent2022;
 
 import org.junit.jupiter.api.Test;
-import uk.co.eandrews.advent2022.day.day04.Day4;
-import uk.co.eandrews.advent2022.day.day04.SectionAssignment;
-import uk.co.eandrews.advent2022.day.day04.SectionAssignmentInputParser;
 import uk.co.eandrews.advent2022.day.day05.CraneOperation;
 import uk.co.eandrews.advent2022.day.day05.CraneOperationInputParser;
 import uk.co.eandrews.advent2022.day.day05.Day5;
 import uk.co.eandrews.util.io.input.parser.InputParser;
-
-import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,10 +29,10 @@ public class Day05Test {
         assertThat(day5.partOneSolution().solve(parser.parse(input.lines()))).isEqualTo("CMZ");
     }
 
-//    @Test
-//    void partTwoSolution_should_return_4() {
-//        final Day4 day4 = new Day4(parser);
-//        assertThat(day4.partTwoSolution().solve(parser.parse(input.lines()))).isEqualTo(4);
-//    }
+    @Test
+    void partTwoSolution_should_return_MCD() {
+        final Day5 day5 = new Day5(parser);
+        assertThat(day5.partTwoSolution().solve(parser.parse(input.lines()))).isEqualTo("MCD");
+    }
 
 }

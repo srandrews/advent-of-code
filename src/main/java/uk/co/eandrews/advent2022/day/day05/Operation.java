@@ -3,8 +3,7 @@ package uk.co.eandrews.advent2022.day.day05;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 import java.util.stream.IntStream;
 
 @Builder
@@ -20,5 +19,15 @@ public class Operation {
                 String item = stacks.get(from).pop();
                 stacks.get(to).push(item);
             });
+    }
+
+    public void applyBulk(Map<Integer, Stack<String>> stacks) {
+        List<String> move = new ArrayList<>(IntStream.range(1, quantity+1)
+            .mapToObj(value -> stacks.get(from).pop())
+            .toList());
+
+        Collections.reverse(move);
+
+        move.forEach(s -> stacks.get(to).push(s));
     }
 }

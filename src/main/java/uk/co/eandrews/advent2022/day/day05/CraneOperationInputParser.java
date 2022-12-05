@@ -6,7 +6,6 @@ import uk.co.eandrews.util.io.input.parser.InputParser;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Component
@@ -50,7 +49,7 @@ public class CraneOperationInputParser implements InputParser<CraneOperation> {
             .map(Integer::parseInt)
             .forEach(integer -> stacks.put(integer, new Stack<>()));
 
-        final String regex = "(\\[\\w\\]|.\\s{3})";
+        final String regex = "(\\[\\w]|.\\s{3})";
         final Pattern pattern = Pattern.compile(regex);
 
         input.stream()
