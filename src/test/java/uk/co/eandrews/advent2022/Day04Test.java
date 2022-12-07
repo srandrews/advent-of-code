@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day04Test {
+class Day04Test {
 
     String input = """
         2-4,6-8

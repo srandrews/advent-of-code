@@ -38,13 +38,6 @@ public class Day3 extends Day2021<Stream<String>, Long> {
         };
     }
 
-//    public PuzzleSolution<Stream<String>, Long> solution(final Vector3 seed) {
-//        return commands -> {
-//            final var result = StreamEx.of(commands).foldLeft(seed, (position, command) -> command.apply(position));
-//            return result.x() * result.y();
-//        };
-//    }
-
     private long countOnes(final List<String> lines, final int index) {
         return lines.stream().mapToLong(l -> l.charAt(index) == '1' ? 1 : -1).sum();
     }

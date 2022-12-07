@@ -1,19 +1,15 @@
 package uk.co.eandrews.advent2022;
 
-import java.util.stream.Stream;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import uk.co.eandrews.advent2022.day.day05.CraneOperation;
-import uk.co.eandrews.advent2022.day.day05.CraneOperationInputParser;
-import uk.co.eandrews.advent2022.day.day05.Day5;
 import uk.co.eandrews.advent2022.day.day06.Day6;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
+import java.util.stream.Stream;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day06Test {
+class Day06Test {
 
     @ParameterizedTest
     @CsvSource({"bvwbjplbgvbhsrlpgdmjqwftvncz,5", "nppdvjthqldpwncqszvftbrmjlhg,6",

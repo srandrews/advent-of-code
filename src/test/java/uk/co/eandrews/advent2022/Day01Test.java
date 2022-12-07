@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day01Test {
+class Day01Test {
 
     String input = """
         1000

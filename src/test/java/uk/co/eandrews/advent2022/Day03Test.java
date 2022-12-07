@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day03Test {
+class Day03Test {
 
     String input = """
         vJrwpWtwJgWrhcsFMMfFFhFp

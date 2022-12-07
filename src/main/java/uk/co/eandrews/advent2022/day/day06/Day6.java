@@ -1,24 +1,17 @@
 package uk.co.eandrews.advent2022.day.day06;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.Stack;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import lombok.experimental.ExtensionMethod;
-import org.springframework.stereotype.Component;
-
 import one.util.streamex.StreamEx;
+import org.springframework.stereotype.Component;
 import uk.co.eandrews.advent2022.Day2022;
-import uk.co.eandrews.advent2022.day.day05.CraneOperation;
 import uk.co.eandrews.util.PuzzleSolution;
 import uk.co.eandrews.util.StreamExUtil;
 import uk.co.eandrews.util.io.input.parser.InputParser;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Component("Day6-2022")
 @ExtensionMethod({StreamEx.class, StreamExUtil.class})

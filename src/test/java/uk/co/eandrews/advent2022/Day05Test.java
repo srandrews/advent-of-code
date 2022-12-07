@@ -8,7 +8,7 @@ import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day05Test {
+class Day05Test {
     String input = """
             [D]   \s
         [N] [C]   \s

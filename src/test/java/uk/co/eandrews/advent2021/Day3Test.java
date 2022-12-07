@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day3Test {
+class Day3Test {
     private final List<String> exampleInput = List.of(
         "00100",
         "11110",
@@ -27,8 +27,6 @@ public class Day3Test {
     );
 
     private final InputParser<Stream<String>> dummyParser = input -> exampleInput.stream();
-
-    private final InputResolver dummyInputResolver = day -> exampleInput.stream();
 
     @Test
     void partOneSolution_should_return_198() {
