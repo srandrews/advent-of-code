@@ -22,6 +22,6 @@ public class SectionAssignment {
         Set<Integer> elfOneAssignmentsCopy = new HashSet<>(elfOneAssignments);
         elfOneAssignmentsCopy.retainAll(elfTwoAssignments);
 
-        return elfOneAssignmentsCopy.isEmpty();
+        return !elfOneAssignmentsCopy.isEmpty();
     }
 }
