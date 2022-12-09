@@ -4,28 +4,24 @@ import lombok.Builder;
 import lombok.With;
 
 @With
+@Builder(toBuilder = true)
 public record Vector2(long x, long y) {
 
     public static final Vector2 ZERO = new Vector2(0, 0);
 
-    @Builder(toBuilder = true)
-    public Vector2 {
-
+    public Vector2 up(final int step) {
+        return toBuilder().x(x).y(y + step).build();
     }
 
-    public Vector2 plus(final Vector2 other) {
-        return toBuilder().x(x + other.x).y(y + other.y).build();
+    public Vector2 down(final int step) {
+        return toBuilder().x(x).y(y - step).build();
     }
 
-    public Vector2 minus(final Vector2 other) {
-        return toBuilder().x(x - other.x).y(y - other.y).build();
+    public Vector2 left(final int step) {
+        return toBuilder().x(x - step).y(y).build();
     }
 
-    public Vector2 times(final Vector2 other) {
-        return toBuilder().x(x * other.x).y(y * other.y).build();
-    }
-
-    public Vector2 div(final Vector2 other) {
-        return toBuilder().x(x / other.x).y(y / other.y).build();
+    public Vector2 right(final int step) {
+        return toBuilder().x(x + step).y(y).build();
     }
 }
