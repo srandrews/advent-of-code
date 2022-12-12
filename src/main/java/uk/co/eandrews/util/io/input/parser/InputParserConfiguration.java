@@ -26,6 +26,11 @@ public class InputParserConfiguration {
     }
 
     @Bean
+    public InputParser<char[][]> charArrayStreamInputParser() {
+        return input -> input.map(String::toCharArray).toArray(char[][]::new);
+    }
+
+    @Bean
     public InputParser<DoubleStream> doubleStreamInputParser() {
         return input -> input.mapToDouble(Double::parseDouble);
     }
