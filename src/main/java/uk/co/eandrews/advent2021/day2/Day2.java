@@ -30,7 +30,7 @@ public class Day2 extends Day2021<Stream<Command>, Long> {
     public PuzzleSolution<Stream<Command>, Long> solution(final Vector2 seed) {
         return commands -> {
             final var result = StreamEx.of(commands).foldLeft(seed, (position, command) -> command.apply(position));
-            return result.x() * result.y();
+            return (long)result.x() * result.y();
         };
     }
 
