@@ -1,4 +1,4 @@
-package uk.co.eandrews.advent2022.day.day12;
+package uk.co.eandrews.util;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,10 +8,10 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class Graph {
-    private Set<Node> nodes = new HashSet<>();
+public class Graph<T> {
+    private Set<Node<T>> nodes = new HashSet<>();
 
-    public void addNode(Node nodeA) {
+    public void addNode(Node<T> nodeA) {
         nodes.add(nodeA);
     }
 

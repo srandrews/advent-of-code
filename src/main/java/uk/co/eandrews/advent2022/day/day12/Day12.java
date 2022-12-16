@@ -3,8 +3,7 @@ package uk.co.eandrews.advent2022.day.day12;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import uk.co.eandrews.advent2022.Day2022;
-import uk.co.eandrews.util.PuzzleSolution;
-import uk.co.eandrews.util.Vector2;
+import uk.co.eandrews.util.*;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.*;
@@ -50,29 +49,29 @@ public class Day12 extends Day2022<char[][], Long> {
     }
 
     private long getPathLength(char[][] topoMap, Vector2 start, Vector2 end) {
-        Graph graph = getGraph(topoMap);
-        Node startNode = graph.getNodes().stream().filter(node -> node.getVector().equals(start)).findFirst().get();
+        Graph<Vector2> graph = getGraph(topoMap);
+        Node<Vector2> startNode = graph.getNodes().stream().filter(node -> node.getId().equals(start)).findFirst().get();
 
         Dijkstra.calculateShortestPathFromSource(graph, startNode);
 
-        Node endNode = graph.getNodes().stream().filter(node -> node.getVector().equals(end)).findFirst().get();
+        Node<Vector2> endNode = graph.getNodes().stream().filter(node -> node.getId().equals(end)).findFirst().get();
         return endNode.getDistance();
     }
 
 
-    private Graph getGraph(char[][] topoMap) {
+    private Graph<Vector2> getGraph(char[][] topoMap) {
 
-        Graph graph = new Graph();
+        Graph<Vector2> graph = new Graph<>();
 
-        Map<Vector2, Node> nodes = IntStream.range(0, topoMap[0].length)
+        Map<Vector2, Node<Vector2>> nodes = IntStream.range(0, topoMap[0].length)
             .mapToObj(x -> IntStream.range(0, topoMap.length)
                 .mapToObj(y -> Vector2.builder().x(x).y(y).build())
                 .map(Node::new))
             .flatMap(nodeStream -> nodeStream)
-            .collect(Collectors.toMap(Node::getVector, Function.identity()));
+            .collect(Collectors.toMap(Node::getId, Function.identity()));
 
         nodes.values()
-            .forEach(node -> getPossibleDirectionsToMove(topoMap, node.getVector())
+            .forEach(node -> getPossibleDirectionsToMove(topoMap, node.getId())
                 .forEach(vector2 -> node.addDestination(nodes.get(vector2),1)));
 
         nodes.values().forEach(graph::addNode);
