@@ -1,2 +1,6 @@
 puzzle:
   input-data-path: input/2022
+day15:
+  row: 2000000
+  min: 0
+  max: 4000000
