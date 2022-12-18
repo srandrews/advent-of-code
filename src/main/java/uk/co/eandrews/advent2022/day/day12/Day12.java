@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import uk.co.eandrews.advent2022.Day2022;
 import uk.co.eandrews.util.*;
+import uk.co.eandrews.util.dijkstra.Dijkstra;
+import uk.co.eandrews.util.dijkstra.Graph;
+import uk.co.eandrews.util.dijkstra.Node;
 import uk.co.eandrews.util.io.input.parser.InputParser;
 
 import java.util.*;
@@ -50,11 +53,13 @@ public class Day12 extends Day2022<char[][], Long> {
 
     private long getPathLength(char[][] topoMap, Vector2 start, Vector2 end) {
         Graph<Vector2> graph = getGraph(topoMap);
-        Node<Vector2> startNode = graph.getNodes().stream().filter(node -> node.getId().equals(start)).findFirst().get();
+        Node<Vector2> startNode = graph.getNodes().stream()
+            .filter(node -> node.getId().equals(start)).findFirst().orElseThrow();
 
-        Dijkstra.calculateShortestPathFromSource(graph, startNode);
+        Dijkstra.calculateShortestPathFromSource(startNode);
 
-        Node<Vector2> endNode = graph.getNodes().stream().filter(node -> node.getId().equals(end)).findFirst().get();
+        Node<Vector2> endNode = graph.getNodes().stream()
+            .filter(node -> node.getId().equals(end)).findFirst().orElseThrow();
         return endNode.getDistance();
     }
 

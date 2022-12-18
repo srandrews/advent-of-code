@@ -33,7 +33,7 @@ public class Day14 extends Day2022<Stream<String>, Long> {
             char[][] layout = getRockLayout(rockPaths, false);
 
             int sand = pourSand(layout, Vector2.builder().y(0).x(500).build());
-   //         printGrid(layout);
+         //   printGrid(layout);
             return Long.valueOf(sand);
         };
     }
@@ -43,15 +43,15 @@ public class Day14 extends Day2022<Stream<String>, Long> {
             List<List<Vector2>> rockPaths = getRockPaths(input);
             char[][] layout = getRockLayout(rockPaths, true);
             int sand = pourSand(layout, Vector2.builder().y(0).x(500).build());
-         //   printGrid(layout);
+           //printGrid(layout);
             return Long.valueOf(sand);
         };
     }
 
     private void printGrid(char[][] layout) {
-        for (int i = 0; i<layout.length; i++ ) {
-            for (int j =328; j<673; j++) {
-                System.out.print(layout[i][j]);
+        for (char[] chars : layout) {
+            for (int j = 328; j < 673; j++) {
+                System.out.print(chars[j]);
             }
             System.out.println();
         }

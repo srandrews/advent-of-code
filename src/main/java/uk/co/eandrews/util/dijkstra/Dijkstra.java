@@ -1,4 +1,4 @@
-package uk.co.eandrews.util;
+package uk.co.eandrews.util.dijkstra;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Dijkstra {
 
-    public static <T> Graph calculateShortestPathFromSource(Graph graph, Node<T> source) {
+    public static <T> void calculateShortestPathFromSource(Node<T> source) {
         source.setDistance(0);
 
         Set<Node<T>> settledNodes = new HashSet<>();
@@ -15,7 +15,7 @@ public class Dijkstra {
 
         unsettledNodes.add(source);
 
-        while (unsettledNodes.size() != 0) {
+        while (!unsettledNodes.isEmpty()) {
             Node<T> currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
             for (Map.Entry<Node<T>, Integer> adjacencyPair:
@@ -29,7 +29,6 @@ public class Dijkstra {
             }
             settledNodes.add(currentNode);
         }
-        return graph;
     }
     private static <T> Node<T> getLowestDistanceNode(Set <Node<T>> unsettledNodes) {
         Node<T> lowestDistanceNode = null;

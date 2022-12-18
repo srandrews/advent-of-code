@@ -1,4 +1,4 @@
-package uk.co.eandrews.util;
+package uk.co.eandrews.util.dijkstra;
 
 import lombok.Getter;
 import lombok.Setter;
