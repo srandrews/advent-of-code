@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import uk.co.eandrews.advent2022.Day2022;
 import uk.co.eandrews.util.PuzzleSolution;
@@ -18,6 +19,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 @Component("Day15-2022")
+@Profile("2022")
 public class Day15 extends Day2022<Stream<String>, Long> {
 
     private long row;
